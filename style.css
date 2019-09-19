@@ -1,0 +1,48 @@
+body
+{
+	background-color: RGB(0,28,79);
+	color: powderblue;
+}
+p
+{
+	font-family: verdana;
+	color: white;
+}
+
+	.first
+	{
+	color: red;
+	font-family:courier
+	}
+
+a:link
+{
+	color: powderblue;
+}
+a:hover
+{
+	color: RGB(100,200,255);
+	font-family: arial
+}
+.propic
+{
+	width: 150px;
+	height:150px;
+	background-color: RGB(180,180,180);
+	padding: 20px 20px;
+	margin: 20px;
+	float: left;
+	
+}
+.bigtext
+{
+	font-style:bold;
+	font-family:monospace;
+	font-size:20px;
+	text-decoration:underline;
+}
+table,th,tr
+{
+	font-family:courier;
+	border: 1px solid powderblue;
+}
