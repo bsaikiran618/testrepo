@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>
+			NakkoBhulo.com
+		</title>
+	</head>
+	<body>
+		<h1 style="text-align:center;color:green">stuff yet to postpone:</h1>
+		<hr>
+
+			Add new task:<br>
+			
+			<input type="text" id="textfield"></input>
+
+			<button onclick="createNewTask()">ADD</button>
+			
+			
+	<p>
+		<ol id="ourlist">
+			
+		</ol>
+	</p>
+
+	</body>
+
+
+</html>
+
+
+ <script>
+
+	var item_no = 1;
+ 	function createNewTask()
+	{
+		var str = document.getElementById("textfield").value;
+		if(str == "")
+		{
+			alert("EMPTY STRING!!");
+		}
+		else
+		{
+			console.log(str);
+			var myTask = document.createElement("li");
+			myTask.setAttribute("id","number"+String(item_no));
+			myTask.innerHTML = String(str);
+			var myClear = document.createElement("button");
+			myClear.innerHTML = "done";
+			myClear.setAttribute("id",String(item_no));
+			myClear.setAttribute("onclick","removeTask("+ String(item_no) + ")");
+			document.getElementById("ourlist").appendChild(myTask);
+			document.getElementById("ourlist").appendChild(myClear);
+			item_no = Number(item_no);
+			item_no++;
+		}
+	}
+	function removeTask( id )
+	{
+		document.getElementById("number"+String(id)).remove();
+		document.getElementById(String(id)).remove();
+	}
+</script>
